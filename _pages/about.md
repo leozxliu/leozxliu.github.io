@@ -7,7 +7,8 @@ subtitle: Assistant Professor of Biomedical Engineering, FAMU-FSU College of Eng
 hero:
   eyebrow: Liu Lab · Group of Living Fluids
   thesis: We study fluids that are essential for life. Our lab combines supercomputing, AI, and benchtop experiments to understand the physics of blood clotting behind hemorrhage, heart attacks, and strokes.
-  band_caption: Red blood cells in a vessel. Cells near the centerline move fastest; cells near the wall tumble in the shear.
+  band_caption: From our simulations of blood flow. Red blood cells, platelets (white), and von Willebrand factor (cyan) moving through a vessel.
+  band_alt: Simulation render of red blood cells, platelets, and von Willebrand factor flowing through a blood vessel
   actions:
     - label: Research
       url: /research/

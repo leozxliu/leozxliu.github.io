@@ -25,12 +25,11 @@ layout: default
     </figure>
   </section>
 
-  <figure class="flow-band" aria-label="Animation of red blood cells in a blood vessel">
-    <canvas id="flow-canvas"></canvas>
-    <figcaption>
-      <span>{{ page.hero.band_caption }}</span>
-      <span class="flow-eq">u(r) = u<sub>max</sub>(1 − r²/R²)</span>
-    </figcaption>
+  <figure class="flow-band">
+    <div class="flow-frame">
+      <img src="{{ '/assets/img/banners/home.jpg' | relative_url }}" alt="{{ page.hero.band_alt }}" loading="eager">
+    </div>
+    <figcaption>{{ page.hero.band_caption }}</figcaption>
   </figure>
 
   <article>
@@ -77,57 +76,3 @@ layout: default
   </article>
 </div>
 
-<script>
-  (() => {
-    const canvas = document.getElementById('flow-canvas');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let W = 0, H = 0, cells = [], dpr = 1;
-
-    const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
-
-    function resize() {
-      dpr = Math.min(window.devicePixelRatio || 1, 2);
-      W = canvas.clientWidth; H = canvas.clientHeight;
-      canvas.width = W * dpr; canvas.height = H * dpr;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const n = Math.round(W * H / 1500);
-      cells = Array.from({ length: n }, () => spawn(Math.random() * W));
-    }
-    // Poiseuille flow: speed peaks on the centerline and falls to zero at the wall.
-    function spawn(x) {
-      const r = (Math.random() * 2 - 1) * 0.92;          // radial position, -1..1
-      return { x, r, size: 5 + Math.random() * 3.5, tilt: Math.random() * Math.PI, spin: (Math.random() - 0.5) * 0.02 };
-    }
-    function drawCell(c, y, fill, rim) {
-      ctx.save();
-      ctx.translate(c.x, y);
-      ctx.rotate(c.tilt);
-      ctx.scale(1, 0.62);
-      ctx.beginPath(); ctx.arc(0, 0, c.size, 0, Math.PI * 2);
-      ctx.fillStyle = rim; ctx.fill();
-      ctx.beginPath(); ctx.arc(0, 0, c.size * 0.55, 0, Math.PI * 2);   // biconcave center
-      ctx.fillStyle = fill; ctx.fill();
-      ctx.restore();
-    }
-    function frame() {
-      const bg = css('--flow-bg'), wall = css('--flow-wall'), rim = css('--flow-cell'), core = css('--flow-core');
-      ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
-      ctx.fillStyle = wall; ctx.fillRect(0, 0, W, 3); ctx.fillRect(0, H - 3, W, 3);
-      const mid = H / 2, R = H / 2 - 10, umax = 1.1;
-      for (const c of cells) {
-        if (!reduce) {
-          c.x += umax * (1 - c.r * c.r) + 0.08;
-          c.tilt += c.spin + c.r * 0.01;                     // shear makes off-center cells tumble
-          if (c.x - c.size > W) Object.assign(c, spawn(-c.size));
-        }
-        drawCell(c, mid + c.r * R, core, rim);
-      }
-      if (!reduce) requestAnimationFrame(frame);
-    }
-    resize(); frame();
-    let t; window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(() => { resize(); if (reduce) frame(); }, 150); });
-    if (reduce) new MutationObserver(frame).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-  })();
-</script>

@@ -28,10 +28,6 @@ $body: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-se
   --global-divider-color: var(--line);
   --global-card-bg-color: var(--paper);
 
-  --flow-bg: #f7eef0;
-  --flow-wall: #e3c3c9;
-  --flow-cell: #b4182d;
-  --flow-core: #d4485a;
 }
 
 @mixin dark-tokens {
@@ -44,10 +40,6 @@ $body: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-se
   --arterial: #ff5d6c;
   --global-hover-text-color: #0a111c;
 
-  --flow-bg: #150e16;
-  --flow-wall: #3a1c26;
-  --flow-cell: #c8283d;
-  --flow-core: #7e1323;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -215,29 +207,42 @@ b, strong {
   color: var(--slate);
 }
 
-/* ---------- Home: blood-flow band ---------- */
+/* ---------- Home: simulation band ---------- */
 .flow-band {
   margin: 0 0 3rem;
 }
-.flow-band canvas {
-  display: block;
+.flow-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  aspect-ratio: 16 / 6;
+  max-width: 100%;
+  background: #3a0b10;
+}
+.flow-frame img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: 132px;
-  border-radius: 16px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 !important;
+  transform-origin: 30% 70%;
+  animation: vessel-drift 26s ease-in-out infinite alternate;
+  will-change: transform;
+}
+/* Camera travels up the vessel, bottom-left to top-right, following the flow. */
+@keyframes vessel-drift {
+  from {
+    transform: scale(1.08) translate(2%, 1.5%);
+  }
+  to {
+    transform: scale(1.32) translate(-6%, -3%);
+  }
 }
 .flow-band figcaption {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 0.5rem 1.5rem;
   margin-top: 0.6rem;
   font-size: 0.85rem;
   color: var(--slate);
-}
-.flow-eq {
-  font-variant-numeric: tabular-nums;
-  font-style: italic;
-  white-space: nowrap;
 }
 
 /* ---------- Home: about + join ---------- */
@@ -429,13 +434,17 @@ footer {
     grid-template-columns: minmax(0, 1fr);
     gap: 0.25rem;
   }
-  .flow-band canvas {
-    height: 104px;
+  .flow-frame {
+    aspect-ratio: 16 / 9;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .btn-hero {
     transition: none;
+  }
+  .flow-frame img {
+    animation: none;
+    transform: scale(1.12);
   }
 }
