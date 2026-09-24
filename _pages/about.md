@@ -10,10 +10,8 @@ hero:
   band_caption: From our simulations of blood flow. Red blood cells, platelets (white), and von Willebrand factor (cyan) moving through a vessel.
   band_alt: Simulation render of red blood cells, platelets, and von Willebrand factor flowing through a blood vessel
   actions:
-    - label: Research
+    - label: Explore research
       url: /research/
-    - label: Publications
-      url: /publications/
     - label: Join the lab
       url: /people/
 
@@ -31,26 +29,12 @@ announcements:
   limit:
 ---
 
-<div class="about-grid" markdown="1">
-
-<div markdown="1">
-
-### About
-
 Dr. Leo Liu is a tenure-track Assistant Professor of Biomedical Engineering in the joint College of Engineering at [Florida A&M University](https://www.famu.edu/) and [Florida State University](https://www.fsu.edu/). He is also affiliated with the [FSU Research Computing Center](https://rcc.fsu.edu/) and the [FSU Institute for Successful Longevity](https://isl.fsu.edu/).
 
 He co-chairs the Biorheology Scientific and Standardization Committee at the [International Society on Thrombosis and Haemostasis](https://www.isth.org/), and moderates the [RPTH podcast](https://www.youtube.com/watch?v=63BXsJSJvwM) on thrombosis and AI.
 
-</div>
-
 <aside class="join" markdown="1">
 
-### Join the lab
-
-GoLF welcomes self-motivated undergraduates, M.S. and Ph.D. students, and postdoctoral researchers who want to work across engineering and medicine.
-
-Send your CV and research interests to **leo.liu@eng.famu.fsu.edu**.
+**Join the lab.** GoLF welcomes self-motivated undergraduates, M.S. and Ph.D. students, and postdocs who want to work across engineering and medicine. Send your CV and research interests to **leo.liu@eng.famu.fsu.edu**.
 
 </aside>
-
-</div>

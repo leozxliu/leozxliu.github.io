@@ -6,35 +6,36 @@ layout: default
   Adds a two-column hero, a blood-flow band, and list-style news.
 {%- endcomment -%}
 <div class="post home">
-  <section class="hero">
-    <div class="hero-text">
-      <p class="eyebrow">{{ page.hero.eyebrow }}</p>
-      <h1 class="hero-name">{{ site.first_name }} {{ site.last_name }}</h1>
-      <p class="hero-role">{{ page.subtitle }}</p>
-      <p class="hero-thesis">{{ page.hero.thesis }}</p>
-      <div class="hero-actions">
-        {% for a in page.hero.actions %}
-          <a class="btn-hero{% if forloop.first %} is-primary{% endif %}" href="{{ a.url | relative_url }}">{{ a.label }}</a>
-        {% endfor %}
-      </div>
+  <section class="hero-full" aria-label="{{ page.hero.band_alt }}">
+    <div class="hero-media">
+      <img src="{{ '/assets/img/banners/home.jpg' | relative_url }}" alt="" loading="eager">
     </div>
-    <figure class="hero-portrait">
+    <div class="hero-top">
+      <h1 class="hero-name">{{ site.first_name }} {{ site.last_name }}</h1>
+      <p class="hero-sub">{{ page.hero.eyebrow }}</p>
+    </div>
+    <div class="hero-bottom">
+      {% for a in page.hero.actions limit: 2 %}
+        <a class="btn-t{% if forloop.first %} is-primary{% else %} is-light{% endif %}" href="{{ a.url | relative_url }}">{{ a.label }}</a>
+      {% endfor %}
+    </div>
+  </section>
+  <p class="hero-caption">{{ page.hero.band_caption }}</p>
+
+  <section class="intro">
+    <figure class="intro-portrait">
       {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-      {% include figure.liquid loading="eager" path=profile_image_path class="img-fluid" sizes="(min-width: 768px) 300px, 90vw" alt=page.profile.alt cache_bust=true %}
+      {% include figure.liquid loading="eager" path=profile_image_path class="img-fluid" sizes="(min-width: 768px) 280px, 90vw" alt=page.profile.alt cache_bust=true %}
       <figcaption>{{ page.profile.more_info }}</figcaption>
     </figure>
+    <div class="intro-text">
+      <p class="intro-role">{{ page.subtitle }}</p>
+      <p class="intro-thesis">{{ page.hero.thesis }}</p>
+      {{ content }}
+    </div>
   </section>
 
-  <figure class="flow-band">
-    <div class="flow-frame">
-      <img src="{{ '/assets/img/banners/home.jpg' | relative_url }}" alt="{{ page.hero.band_alt }}" loading="eager">
-    </div>
-    <figcaption>{{ page.hero.band_caption }}</figcaption>
-  </figure>
-
   <article>
-    <div class="home-body clearfix">{{ content }}</div>
-
     {% if page.announcements and page.announcements.enabled %}
       {% assign news_size = site.news | size %}
       <section class="home-section">
