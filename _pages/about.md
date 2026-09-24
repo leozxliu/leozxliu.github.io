@@ -20,11 +20,15 @@ social: true
 announcements:
   enabled: true
   scrollable: true
-  limit: 8
+  limit: # show all news
 
 latest_posts:
   enabled: false
 ---
+
+<img src="/assets/img/liulab-logo.png" alt="Liu Lab, Group of Living Fluids" style="max-width:260px;width:60%;margin-bottom:1rem">
+
+<img src="/assets/img/banners/home.jpg" alt="" style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:1.5rem">
 
 **We study fluids that are essential for life!**
 

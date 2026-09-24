@@ -7,7 +7,13 @@ nav: true
 nav_order: 3
 ---
 
+<img src="/assets/img/banners/people.jpg" alt="" style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:1.5rem">
+
 ## Principal Investigator
+
+<div style="display:flex;gap:1.25rem;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.75rem">
+<img src="/assets/img/prof_pic.jpg" alt="Z. Leonardo Liu" loading="lazy" style="width:150px;border-radius:8px">
+<div markdown="1" style="flex:1;min-width:240px">
 
 **Z. Leonardo Liu, Ph.D.**<br>
 Tenure-Track Assistant Professor (Aug. 2022 – present), Department of Chemical and Biomedical Engineering, [FAMU-FSU College of Engineering](https://eng.famu.fsu.edu/cbe/people/liu)<br>
@@ -19,41 +25,93 @@ Affiliate, [FSU Research Computing Center](https://rcc.fsu.edu/) and [FSU Instit
 
 Office: 850-410-6168 · Email: [leo.liu@eng.famu.fsu.edu](mailto:leo.liu@eng.famu.fsu.edu)
 
+</div>
+</div>
+
 ---
 
 ## Current Members
+
+<div style="display:flex;gap:1.25rem;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.75rem">
+<img src="/assets/img/people/rojan.jpg" alt="Rojan Saghian" loading="lazy" style="width:150px;border-radius:8px">
+<div markdown="1" style="flex:1;min-width:240px">
 
 **Rojan Saghian, Ph.D.** — Lab Manager<br>
 [GitHub](https://github.com/rsyc) · [rojan.saghian@famu.edu](mailto:rojan.saghian@famu.edu)
 
 Dr. Saghian focuses on computational modeling of hemostasis and its link to endometrial vascular disorders, exploring how changes in uterine vascular structure contribute to excessive menstrual and postpartum bleeding, with the goal of developing new clinical screening methods and non-surgical treatments. Previously she was a Postdoctoral Research Fellow at the Hospital for Sick Children (SickKids), University of Toronto (2018–2023), and earned her Ph.D. in Bioengineering from the Auckland Bioengineering Institute, University of Auckland. She also holds an M.S. in Elementary Particles and Field Theory Physics and a B.S. in Physics from Shahid Beheshti University. Outside of research, she enjoys piano, cooking, painting, and crafting.
 
+</div>
+</div>
+
+<div style="display:flex;gap:1.25rem;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.75rem">
+<img src="/assets/img/people/hugo.jpg" alt="Hugo Castillo Sánchez" loading="lazy" style="width:150px;border-radius:8px">
+<div markdown="1" style="flex:1;min-width:240px">
+
 **Hugo Castillo Sánchez, Ph.D.** — Postdoctoral Researcher<br>
 [Website](https://hugocastillocom.wordpress.com) · [ORCID](https://orcid.org/0000-0001-8724-1883) · [Google Scholar](https://scholar.google.es/citations?user=3tC9GmMAAAAJ) · [YouTube: CFD by Hugo Castillo Sánchez](https://www.youtube.com/@CFDbyhacs)
 
 Hugo combines rheology, non-Newtonian fluid mechanics, computational fluid dynamics, and transport phenomena to solve complex-fluid flow problems, including blood, polymeric, micellar, and suspension flows. Before joining the lab, he was a postdoc at the Institute of Mathematics and Computational Sciences, University of São Paulo, developing CFD software for single- and multi-phase Newtonian and non-Newtonian flows. His Ph.D. in Mathematics from University College London, on channel-flow instabilities of polymeric flows, received the British Society of Rheology's 2020 Vernon Harrison Award for the most distinguished Ph.D. thesis in rheology. He holds M.Sc. and B.Sc. degrees in Chemical Engineering from the National Autonomous University of Mexico.
+
+</div>
+</div>
+
+<div style="display:flex;gap:1.25rem;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.75rem">
+<img src="/assets/img/people/rukiye.jpg" alt="Rukiye Tuna" loading="lazy" style="width:150px;border-radius:8px">
+<div markdown="1" style="flex:1;min-width:240px">
 
 **Rukiye Tuna, M.S.** — Ph.D. Candidate, Biomedical Engineering, Florida State University (Jan. 2023 – present)<br>
 [Website](https://rukiyetuna.github.io/) · [rtuna@eng.famu.fsu.edu](mailto:rtuna@eng.famu.fsu.edu)
 
 M.S., Mechanical Engineering, University of Massachusetts Lowell, 2017; B.S., Mechanical Engineering, Dokuz Eylül University, 2014. Before joining FSU, Rukiye designed power turbine blades as a mechanical engineer at Siemens Gamesa Renewable Energy. Her M.S. work assessed wind turbine blade integrity using active and passive acoustic sensing. She enjoys the gym, yoga and Pilates, walking, philosophy, cooking, and learning about different cultures.
 
+</div>
+</div>
+
+<div style="display:flex;gap:1.25rem;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.75rem">
+<img src="/assets/img/people/michael.jpg" alt="Michael K. Davis III" loading="lazy" style="width:150px;border-radius:8px">
+<div markdown="1" style="flex:1;min-width:240px">
+
 **Michael K. Davis III, B.S., NREMT** — Post-Baccalaureate Researcher<br>
 [GitHub](https://github.com/Davismk3) · [mkd21@fsu.edu](mailto:mkd21@fsu.edu)
 
 B.S. Mathematics, Florida State University, 2025; NREMT, Tallahassee State College. Michael aspires to be a physician and works as an Emergency Medical Technician at Gadsden County EMS. At the Liu Lab he pursues his interests in neural networks and fluid dynamics. In his free time he enjoys reading about history and astronomy and spending time with family.
+
+</div>
+</div>
+
+<div style="display:flex;gap:1.25rem;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.75rem">
+<img src="/assets/img/people/leah.jpg" alt="Leah K. DuBose" loading="lazy" style="width:150px;border-radius:8px">
+<div markdown="1" style="flex:1;min-width:240px">
 
 **Leah K. DuBose** — Undergraduate Researcher, Biomedical Engineering, Florida A&M University (Aug. 2025 – present)<br>
 [LinkedIn](https://www.linkedin.com/in/leah-dubose-aa1509210) · [leah1.dubose@famu.edu](mailto:leah1.dubose@famu.edu)
 
 Leah graduated top of her class from Booker High School in Sarasota, FL. At FAMU she is a member of Jewels Incorporated, the National Society of Black Women in Medicine, and the National Society of Black Engineers, and serves as an Engineering Ambassador for the FAMU-FSU College of Engineering. She interned at UCLA on transportation research and EV adoption in California. She enjoys cooking, time with friends, and nature walks.
 
+</div>
+</div>
+
+<div style="display:flex;gap:1.25rem;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.75rem">
+<img src="/assets/img/people/sindhu.jpg" alt="Sindhu Bilapati" loading="lazy" style="width:150px;border-radius:8px">
+<div markdown="1" style="flex:1;min-width:240px">
+
 **Sindhu Bilapati** — Undergraduate Researcher, Biomedical Engineering, Florida State University (Aug. 2025 – present)<br>
 Minors: Computer Science, Mathematics, and Chemistry · [LinkedIn](https://www.linkedin.com/in/sindhu-bilapati-4174052b0/) · [sb23bg@fsu.edu](mailto:sb23bg@fsu.edu)
 
 Sindhu has conducted photolithography research at FIU and interned at Hanger Clinic, gaining clinical insight into prosthetics. She manages Nandana, FSU's first competitive Bollywood fusion dance team, leads first-year students through Engage 100, and serves as Digital Media Co-Chair of GRIP, creating adaptive devices for children.
 
+</div>
+</div>
+
+<div style="display:flex;gap:1.25rem;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.75rem">
+<img src="/assets/img/people/join-us.png" alt="FAMU and FSU" loading="lazy" style="width:150px;border-radius:8px">
+<div markdown="1" style="flex:1;min-width:240px">
+
 **It could be you!** [Get in touch](mailto:leo.liu@eng.famu.fsu.edu).
+
+</div>
+</div>
 
 ---
 
