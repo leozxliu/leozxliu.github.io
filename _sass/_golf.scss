@@ -215,9 +215,10 @@ b, strong {
   position: relative;
   overflow: hidden;
   border-radius: 18px;
-  aspect-ratio: 16 / 6;
+  aspect-ratio: 1600 / 774; /* the render's own proportions: nothing cropped */
   max-width: 100%;
   background: #3a0b10;
+  isolation: isolate;
 }
 .flow-frame img {
   position: absolute;
@@ -226,17 +227,41 @@ b, strong {
   height: 100%;
   object-fit: cover;
   border-radius: 0 !important;
-  transform-origin: 30% 70%;
-  animation: vessel-drift 26s ease-in-out infinite alternate;
+  animation: vessel-drift 18s ease-in-out infinite alternate;
   will-change: transform;
 }
-/* Camera travels up the vessel, bottom-left to top-right, following the flow. */
+/* A light drift along the vessel axis; small enough to stay sharp. */
 @keyframes vessel-drift {
   from {
-    transform: scale(1.08) translate(2%, 1.5%);
+    transform: scale(1.04) translate(1%, 0.6%);
   }
   to {
-    transform: scale(1.32) translate(-6%, -3%);
+    transform: scale(1.06) translate(-1%, -0.6%);
+  }
+}
+/* A soft band of light travels up the vessel, following the flow direction. */
+.flow-frame::after {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: linear-gradient(
+    115deg,
+    transparent 42%,
+    rgba(255, 220, 220, 0.16) 48%,
+    rgba(255, 240, 240, 0.28) 50%,
+    rgba(255, 220, 220, 0.16) 52%,
+    transparent 58%
+  );
+  mix-blend-mode: screen;
+  pointer-events: none;
+  animation: flow-sheen 5.5s linear infinite;
+}
+@keyframes flow-sheen {
+  from {
+    transform: translate(-30%, 18%);
+  }
+  to {
+    transform: translate(30%, -18%);
   }
 }
 .flow-band figcaption {
@@ -434,9 +459,6 @@ footer {
     grid-template-columns: minmax(0, 1fr);
     gap: 0.25rem;
   }
-  .flow-frame {
-    aspect-ratio: 16 / 9;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -445,6 +467,10 @@ footer {
   }
   .flow-frame img {
     animation: none;
-    transform: scale(1.12);
+    transform: none;
+  }
+  .flow-frame::after {
+    animation: none;
+    display: none;
   }
 }
