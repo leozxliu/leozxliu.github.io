@@ -28,13 +28,13 @@ latest_posts:
 <style>
   .profile .more-info { font-family: inherit; font-size: 0.85rem; line-height: 1.35; text-align: center; }
   .profile .more-info p { margin: 0; }
-  .golf-hero { position: relative; border-radius: 10px; overflow: hidden; margin: 2rem 0 1.25rem; clear: both; }
+  .golf-hero { position: relative; border-radius: 10px; overflow: hidden; margin: 2rem 0 1.25rem; clear: both; box-shadow: var(--bay-shadow); }
   .golf-hero img.bg { width: 100%; height: 210px; object-fit: cover; display: block; }
-  .golf-hero .golf-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.78), rgba(0,0,0,.35)) !important;
+  .golf-hero .golf-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,22,36,.88), rgba(11,22,36,.2)) !important;
     display: flex; flex-direction: column; justify-content: center; padding: 1.25rem 1.75rem; color: #fff; }
   .golf-hero p.tagline { color: #fff !important; font-size: 1.6rem; font-weight: 600; line-height: 1.2; margin: 0 0 .5rem; }
   .golf-hero p.quote { color: #f3f3f3 !important; font-style: italic; opacity: .9; margin: 0; }
-  .golf-join { border-left: 4px solid var(--global-theme-color); background: var(--global-code-bg-color, rgba(0,0,0,.03));
+  .golf-join { border-left: 4px solid var(--global-theme-color); background: var(--bay-surface);
     padding: .9rem 1.1rem; border-radius: 0 8px 8px 0; margin: 0 0 2rem; }
   .golf-join p { margin: 0; }
   .news img { max-height: 70px !important; }
